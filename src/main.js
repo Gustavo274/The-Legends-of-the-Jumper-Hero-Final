@@ -11,6 +11,7 @@ export default new Phaser.Game({
     width:450,
     height: 417,
     scene: [GameStart, Game, GameOver],
+    scale: {mode: Phaser.Scale.FIT, autoCenter: Phaser.Scale.CENTER_BOTH},
     physics: {
         default: "arcade",
         arcade: {
