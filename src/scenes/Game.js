@@ -22,7 +22,7 @@ export default class Game extends Phaser.Scene {
     }
 
     init() {
-    this.score = 0
+    this.score = 0;
     }
 
     preload() {
@@ -200,7 +200,7 @@ export default class Game extends Phaser.Scene {
             /** @type {Phaser.Physics.Arcade.Sprite} */
             const platform = child;
 
-            const scrollY = this.cameras.main.scrollY
+            const scrollY = this.cameras.main.scrollY;
             if (platform.y >= scrollY + 560) {
                 platform.y = scrollY - Phaser.Math.Between(60, 68);
                 platform.x = Phaser.Math.Between(200, 500);
@@ -208,7 +208,7 @@ export default class Game extends Phaser.Scene {
                 this.score +=1;
                 this.scoreLabel.text = ("Score: ") + this.score;
             }
-        })
+        });
 
         if (this.cursors.left.isDown) {
             this.personagem.setVelocityX(-200);
@@ -229,24 +229,24 @@ export default class Game extends Phaser.Scene {
             // stop movement if not left or right
             this.personagem.setVelocityX(0);
             if(touchingDown){
-                if(this.dir == 0){
+                if(this.dir === 0){
                     this.personagem.anims.playReverse("parado2", true);
                 }
-                if(this.dir == 1){
+                if(this.dir === 1){
                     this.personagem.anims.play("parado", true);
                 }
             }
         }
 
-        const isJumpJustDown = Phaser.Input.Keyboard.JustDown(this.cursors.up)
+        const isJumpJustDown = Phaser.Input.Keyboard.JustDown(this.cursors.up);
 
         if(isJumpJustDown && (touchingDown || this.jumpCount < 1)){
             this.personagem?.setVelocityY(-430);
             this.jumpCount++;
-            if(this.dir == 0){
+            if(this.dir === 0){
                 this.personagem.anims.playReverse("Pulo2", true);
             }
-            if(this.dir == 1){
+            if(this.dir === 1){
                 this.personagem.anims.play("Pulo", true);
             }
         }
