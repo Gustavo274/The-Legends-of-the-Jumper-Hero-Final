@@ -4,12 +4,12 @@ export default class GameStart extends Phaser.Scene
  {
  constructor()
  {
- super("game-start")
+  super("game-start")
  }
 
  preload() {
    this.load.image("inicio", "assets/Fundo_jogo.png")
-   this.load.audio("musica_fundo", ["assets/audio/background_song.mp3"])
+   this.load.audio("musica_fundo", ["assets/audio/background_song.mp3"]);
 
    this.load.image("background", "assets/Background.png")
    this.load.image("platform", "assets/PlatformReady.png")
@@ -27,7 +27,7 @@ export default class GameStart extends Phaser.Scene
    this.load.spritesheet("HeroPulo", "assets/Hero/Jump.png", { frameWidth: 180, frameHeight: 180 })
    this.load.spritesheet("HeroPulo2", "assets/Hero/Jump2.png", { frameWidth: 180, frameHeight: 180 })
    this.load.spritesheet("HeroCorridaEsq", "assets/Hero/RunLeft.png", { frameWidth: 180, frameHeight: 180 })
-   this.load.spritesheet("HeroCorridaDir", "assets/Hero/RunRight.png", { frameWidth: 180, frameHeight: 180 })
+   this.load.spritesheet("HeroCorridaDir", "assets/Hero/RunRight.png", { frameWidth: 180, frameHeight: 180 });
  }
 
  create() {

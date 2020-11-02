@@ -36,13 +36,13 @@ export default class Game extends Phaser.Scene {
         this.load.audio("musica_fundo", ["assets/audio/background_song.mp3"])
 
         this.load.spritesheet("HeroParado", "assets/Hero/Idle.png", { frameWidth: 180, frameHeight: 180 })
-        this.load.spritesheet("HeroParado2", "assets/Hero/Idle3.png", { frameWidth: 180, frameHeight: 180 })
-        this.load.spritesheet("HeroQueda", "assets/Hero/Fall.png", { frameWidth: 180, frameHeight: 180 })
+        this.load.spritesheet("HeroParado2", "assets/Hero/Idle3.png", { frameWidth: 180, frameHeight: 180 });
+        this.load.spritesheet("HeroQueda", "assets/Hero/Fall.png", { frameWidth: 180, frameHeight: 180 });
         this.load.spritesheet("HeroQueda2", "assets/Hero/Fall2.png", { frameWidth: 180, frameHeight: 180 })
         this.load.spritesheet("HeroPulo", "assets/Hero/Jump.png", { frameWidth: 180, frameHeight: 180 })
         this.load.spritesheet("HeroPulo2", "assets/Hero/Jump2.png", { frameWidth: 180, frameHeight: 180 })
         this.load.spritesheet("HeroCorridaEsq", "assets/Hero/RunLeft.png", { frameWidth: 180, frameHeight: 180 })
-        this.load.spritesheet("HeroCorridaDir", "assets/Hero/RunRight.png", { frameWidth: 180, frameHeight: 180 })
+        this.load.spritesheet("HeroCorridaDir", "assets/Hero/RunRight.png", { frameWidth: 180, frameHeight: 180 });
     }
 
   findBottomMostPlatform()
@@ -60,7 +60,7 @@ export default class Game extends Phaser.Scene {
         continue
       }
 
-      bottomPlatform = platform
+      bottomPlatform = platform;
     }
 
     return bottomPlatform
@@ -91,7 +91,7 @@ export default class Game extends Phaser.Scene {
         //-----------------------------------------------------------------
         var scoreFont = "bold 100px Arial";
          
-         const style = { color: "#DCDCDC", fontSize: 24 }
+         const style = { color: "#DCDCDC", fontSize: 24 };
          this.scoreLabel = this.add.text(70, 40, "Score: 0", style).setScrollFactor(0).setOrigin(0.5, 0);
          this.scoreLabel.align = "left";
 

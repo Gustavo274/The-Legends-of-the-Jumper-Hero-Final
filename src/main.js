@@ -2,7 +2,7 @@ import Phaser from "./lib/phaser.js"
 
 import Game from "./scenes/Game.js"
 import GameOver from "./scenes/GameOver.js"
-import GameStart from "./scenes/GameStart.js"
+import GameStart from "./scenes/GameStart.js";
 
 console.dir(Phaser)
 
