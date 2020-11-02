@@ -265,7 +265,7 @@ export default class Game extends Phaser.Scene {
         }
         
         const bottomPlatform = this.findBottomMostPlatform()
-        if (this.personagem.y > bottomPlatform.y + 200);
+        if (this.personagem.y > bottomPlatform.y + 200)
         {
             this.scene.start("game-over", { highscore: this.highscore, score: this.score });
         }
