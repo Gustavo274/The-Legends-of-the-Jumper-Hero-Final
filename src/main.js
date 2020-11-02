@@ -1,7 +1,7 @@
-import Phaser from "./lib/phaser.js"
+import Phaser from "./lib/phaser.js";
 
-import Game from "./scenes/Game.js"
-import GameOver from "./scenes/GameOver.js"
+import Game from "./scenes/Game.js";
+import GameOver from "./scenes/GameOver.js";
 import GameStart from "./scenes/GameStart.js";
 
 console.dir(Phaser)
@@ -21,4 +21,4 @@ export default new Phaser.Game({
             debug: false
         }
     }
-})
+});
