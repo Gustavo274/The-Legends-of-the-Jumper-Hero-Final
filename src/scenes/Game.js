@@ -118,9 +118,6 @@ export default class Game extends Phaser.Scene {
         this.personagem.body.checkCollision.up = false
         //this.personagem.body.checkCollision.left = false
         //this.personagem.body.checkCollision.right = false
-
-        //Plataformas Collision
-        //this.platforms.body.setSize(483, 179, true);
         
         //Camera ---------------------------------------------
         this.cameras.main.startFollow(this.personagem)
@@ -187,20 +184,12 @@ export default class Game extends Phaser.Scene {
             frameRate: 10,
             repeat: -1
           });
-
-        this.anims.create({
-            key: 'Ataque',
-            frames: this.anims.generateFrameNumbers('HeroAtaque',{start: 0, end: 6}),
-            frameRate: 20,
-            repeat: -1
-          });  
     }
 
     update(t, dt) {
         const touchingDown = this.personagem.body.touching.down
 
         const dir = 0
-        const isAttacking = false
         const yAnt = 0
 
         //Parallax-------------------------------------
@@ -208,10 +197,6 @@ export default class Game extends Phaser.Scene {
         this.bg2.tilePositionX = this.myCam.scrollX * .04;
         //-----------------------------------------------
 
-        /*if (touchingDown) {
-
-            this.personagem.setVelocityY(-300)
-        }*/
         this.platforms.children.iterate(child => {
             /** @type {Phaser.Physics.Arcade.Sprite} */
             const platform = child
@@ -225,15 +210,6 @@ export default class Game extends Phaser.Scene {
                 this.scoreLabel.text = ('Score:') + this.score;
             }
         })
-
-        //if(touchingDown){}
-
-        if(Phaser.Input.Keyboard.JustDown(this.spacebar))
-          if(!isAttacking){
-            this.personagem.anims.play('Ataque', true)
-            this.isAttacking = true
-            this.timer
-        }
 
         if (this.cursors.left.isDown) {
             this.personagem.setVelocityX(-200)
@@ -262,7 +238,6 @@ export default class Game extends Phaser.Scene {
                 }
             }
         }
-
 
         const isJumpJustDown = Phaser.Input.Keyboard.JustDown(this.cursors.up)
 

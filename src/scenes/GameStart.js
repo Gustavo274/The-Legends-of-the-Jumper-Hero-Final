@@ -22,16 +22,12 @@ export default class GameStart extends Phaser.Scene
 
    this.load.spritesheet('HeroParado', 'assets/Hero/Idle.png', { frameWidth: 180, frameHeight: 180 })
    this.load.spritesheet('HeroParado2', 'assets/Hero/Idle3.png', { frameWidth: 180, frameHeight: 180 })
-   this.load.spritesheet('HeroAtaque', 'assets/Hero/Attack1.png', { frameWidth: 180, frameHeight: 180 })
-   this.load.spritesheet('HeroMorte', 'assets/Hero/Death.png', { frameWidth: 180, frameHeight: 180 })
    this.load.spritesheet('HeroQueda', 'assets/Hero/Fall.png', { frameWidth: 180, frameHeight: 180 })
    this.load.spritesheet('HeroQueda2', 'assets/Hero/Fall2.png', { frameWidth: 180, frameHeight: 180 })
    this.load.spritesheet('HeroPulo', 'assets/Hero/Jump.png', { frameWidth: 180, frameHeight: 180 })
    this.load.spritesheet('HeroPulo2', 'assets/Hero/Jump2.png', { frameWidth: 180, frameHeight: 180 })
    this.load.spritesheet('HeroCorridaEsq', 'assets/Hero/RunLeft.png', { frameWidth: 180, frameHeight: 180 })
    this.load.spritesheet('HeroCorridaDir', 'assets/Hero/RunRight.png', { frameWidth: 180, frameHeight: 180 })
-   this.load.spritesheet('HeroApanha', 'assets/Hero/TakeHit.png', { frameWidth: 180, frameHeight: 180 })
-   this.load.spritesheet('HeroAtaque', 'assets/Hero/Attack1.png', { frameWidth: 180, frameHeight: 180 })
  }
 
  create() {
